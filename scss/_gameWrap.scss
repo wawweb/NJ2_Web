@@ -1,0 +1,290 @@
+.gameWrap {
+    width: 100%;
+    height: auto;
+
+    //主內容
+    .content {
+        width: 1400px;
+        height: auto;
+        margin: 30px auto 60px;
+
+        // .banner {
+        //     width: 100%;
+        //     height: 220px;
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-content: space-evenly;
+        //     align-items: center;
+        //     margin: 10px 0 16px;
+
+        //     .name {
+        //         background: $mainLinear_1;
+        //         background-clip: text;
+        //         color: transparent;
+        //         font-size: 56px;
+        //         font-weight: bold;
+        //     }
+
+        //     .text {
+        //         width: 870px;
+        //         height: auto;
+        //         color: $gameWrap_Word;
+        //         font-size: 18px;
+        //         font-weight: bold;
+        //         line-height: 22px;
+        //     }
+        // }
+
+        //marqueeWrap
+        .marqueeWrap {
+            width: 100%;
+            height: auto;
+            margin-bottom: 24px;
+
+            .marquee {
+                width: 100%;
+                height: 52px;
+                background: $marquee_BG;
+                border: solid 1px $marquee_Border;
+                border-radius: 30px;
+                box-shadow: 0 2px 5px 0 $marquee_Shadow inset;
+                display: flex;
+
+                .title {
+                    width: 165px;
+                    height: 100%;
+                    background: $marquee_Linear;
+                    border-radius: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+
+                    p {
+                        color: $marquee_Linear_Word;
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                }
+
+                .textBox {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    overflow: hidden;
+                    
+                    p {
+                        color: $marquee_Word;
+                        font-size: 20px;
+                        font-weight: bold;
+                        white-space: nowrap;
+                        padding-left: 100%;
+                        animation: marquee 10s linear 0s infinite;
+                    }
+                }
+
+                @keyframes marquee {
+                    0% {
+                        transform: translateX(0%);
+                    }
+
+                    100% {
+                        transform: translateX(-100%);
+                    }
+                }
+            }
+        }
+
+        //搜尋列
+        .searchWrap {
+            width: 100%;
+            height: 70px;
+            // background: $mainLinear_1;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            margin-bottom: 12px;
+
+            i {
+                width: 29px;
+                height: 29px;
+                margin: 0 12px 0 16px;
+                flex-shrink: 0;
+                position: absolute;
+            }
+
+            input {
+                width: 100%;
+                height: 50px;
+                @include mainInput;
+                border-radius: 30px;
+                padding-left: 60px;
+            }
+
+            button {
+                width: 120px;
+                height: 50px;
+                @include secondBtn;
+                background: $footer_List_Active;
+                margin-left: 12px;
+            }
+        }
+
+        //platformBox
+        .platformBox {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 20px;
+            margin-bottom: 30px;
+
+            li {
+                width: auto;
+                height: 51px;
+                color: $gameWrap_platformBtn_Word;
+                font-size: 20px;
+                font-weight: bold;
+                border: 1px solid $gameWrap_platformBoxLI_border ;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 20px;
+                margin: 0 9px 10px;
+                cursor: pointer;
+                transform: skewX(335deg);
+
+                p {
+                    display: block;
+                    color: $gameWrap_platformBtn_Word;
+                    font-size: 20px;
+                    font-weight: bold;
+                    transform: skewX(-335deg);
+                }
+
+                &.active {
+                    border: 1px solid transparent;
+                    p {
+                        color: $gameWrap_platformBtn_Active;
+                    }
+                }
+            }
+        }
+
+        //gameBox
+        .gameBox {
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px 10px;
+
+            &.notPlat {
+                grid-template-columns: repeat(5,1fr);
+            }
+
+            &.single {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            li {
+                width: auto;
+                height: auto;
+                cursor: pointer;
+                position: relative;
+                display: none;
+
+                &.display {
+                    display: block;
+                }
+
+                &:hover,&:active,&.active {
+                    
+                    div {
+
+                        .mask {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                div {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 16px;
+                    font-size: 0;
+                    position: relative;
+                    overflow: hidden;
+
+                    .mask {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: $filter;
+                        z-index: 1;
+                        opacity: 0;
+                        transition: 0.3s all;
+
+                        button {
+                            width: 165px;
+                            height: 45px;
+                            @include playBtn;
+                        }
+                    }
+
+                    i {
+                        position: absolute;
+                        top: 15px;
+                        left: 15px;
+                        width: 23px;
+                        height: 21px;
+                        z-index: 2;
+                    }
+                }
+
+                p {
+                    width: 100%;
+                    color: $subDeco_color02;
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-align: center;
+                    padding-top: 5px;
+                }
+
+                span {
+                    display: none;
+                    background: $gameWrap_Game_platformBG;
+                    color: $mainFont_1;
+                    font-size: 13px;
+                    font-weight: bold;
+                    position: absolute;
+                    top: 15px;
+                    right: 0;
+                    padding: 5px 10px 5px 3px;
+
+                    &.display {
+                        display: block;
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: -12px;
+                        bottom: 0;
+                        border-style: solid;
+                        border-width: 0 0 23px 12px;
+                        border-color: $gameWrap_Game_platformBG transparent;
+                    }
+                }
+            }
+        }
+    }
+}

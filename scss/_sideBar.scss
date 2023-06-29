@@ -1,0 +1,45 @@
+.sideBar {
+
+    //邀請朋友
+    .inviteFriend {
+        width: 125px;
+        height: 125px;
+        position: fixed;
+        top: 400px;
+        right: 10px;
+    }
+
+    //goTop
+    .goTop {
+        width: 95px;
+        height: 95px;
+        background: $subDeco_color02;
+        border-radius: 50%;
+        position: fixed;
+        right: 15px;
+        bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: 0.3s all;
+        pointer-events: none;
+
+        &.display {
+            opacity: 1;
+            pointer-events: visible;
+        }
+
+        i {
+            width: 29px;
+            height: 24px;
+        }
+
+        p {
+            color: $mainLinear_Word;
+            font-size: 22px;
+            font-weight: bold;
+        }
+    }
+}

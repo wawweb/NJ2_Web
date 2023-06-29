@@ -1,0 +1,462 @@
+header {
+    width: 100%;
+    min-width: 1400px;
+    height: auto;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    //上部
+    .top {
+        width: 100%;
+        height: 70px;
+        background: $mainColor;
+        margin: 0px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 60px;
+
+        //logo
+        .logo {
+            cursor: pointer;   
+        }
+
+        //右
+        .user {
+            width: auto;
+            height: 100%;
+            align-items: center;
+            display: flex;
+
+            li:not(.platform) {
+                display: flex;
+                width: auto;
+                height: 100%;
+                align-items: center;
+                position: relative;
+
+                //未登入選單
+                .loginForm {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    div {
+                        margin-right: 15px;
+
+                        input {
+                            width: 180px;
+                            height: 40px;
+                            @include headerInput;
+                        }
+                    }
+
+                    button {
+                        width: 115px;
+                        height: 40px;
+                        @include mainBtn;
+                        margin-right: 8px;
+
+                        &.signupBtn {
+                            width: 102px;
+                            @include secondBtn;
+                            margin-right: 15px;
+                        }
+                    }
+
+                    //退傭代理註冊按鈕
+                    .agentSignup {
+                        width: 136px;
+                        height: 40px;
+                        border-radius: 20px;
+                        margin-right: 20px;
+                    }
+                }
+
+                //忘記密碼
+                &.forget {
+                    color: $header_Color1;
+                    font-size: 17px;
+                    font-weight: bold;
+                    margin-right: 15px;
+                    cursor: pointer;
+
+                    i {
+                        width: 18px;
+                        height: 18px;
+                        margin-right: 5px;
+                    }
+                }
+
+                //語言列
+                &.lang {
+                    width: auto;
+                    height: auto;
+
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        pointer-events: none;
+                    }
+
+                    &::before {
+                        width: 1px;
+                        height: 30px;
+                        background: $header_langBorder;
+                        right: 40px;
+                    }
+                    &::after {
+                        width: 5px;
+                        height: 5px;
+                        border-style: solid;
+                        border-width: 0 3px 3px 0;
+                        border-color: $header_langBorder;
+                        transform: translateY(-50%) rotate(45deg);
+                        right: 18px;
+                    }
+                    
+                    select {
+                        width: 150px;
+                        height: 40px;
+                        @include headerLang;
+                    }
+                }
+            }
+
+            //已登入
+            &.alLogin {
+                position: relative;
+
+                li:not(.platform) {
+                    margin-right: 15px;
+
+                    &:nth-of-type(3),
+                    &:nth-of-type(4),
+                    &:nth-of-type(5) {
+                        
+                        button {
+                            width: 45px;
+                            height: 45px;
+                            @include headerBtn_3;
+                        }
+                    }
+
+                    &:nth-of-type(4) {
+                        button {
+                            background: $mainDeco_color;
+
+                            &:hover,&:active,&.active {
+                                background: $header_mainColor_Active;
+                            }
+                        }
+                    }
+
+                    button {
+                        width: auto;
+                        height: auto;
+                        background: none;
+                        color: $header_mainColor;
+                        font-size: 16px;
+                        font-weight: bold;
+                        transition: all 0.3s;
+
+                        &:hover,&:active,&.active {
+                            color: $header_mainColor_Active;
+                        }
+
+                        .remind {
+                            min-width: 20px;
+                            min-height: 20px;
+                            @include headerMailRemind;
+                        }
+                    }
+
+                    //等級
+                    &.lv {
+                        color: $header_Color1;
+                        font-weight: bold;
+                        font-size: 16px;
+
+                        span {
+                            color: $header_Color2;
+                            margin-left: 10px;
+                        }
+                    }
+
+                    //各平台金額
+                    &.moneyTotal {
+
+                        .total {
+                            width: auto;
+                            height: auto;
+                            @include headerMoney;
+                        }
+                    }
+
+                    &.lang {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .transferInfo {
+            width: 1400px;
+            height: auto;
+            background: $headerMoneyList_BG;
+            border: solid 1px $headerMoneyList_Border;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 70px;
+            z-index: 20;
+            display: none;
+
+            &.display {
+                display: block;
+            }
+
+            li {
+                width: 100%;
+                height: 45px;
+                border-bottom: solid 1px $headerMoneyList_Border;
+                display: flex;
+                align-items: center;
+
+                &:last-child {
+                    border: none;
+                }
+
+                div {
+                    width: 20%;
+                    height: 30px;
+                    border-right: solid 1px $headerMoneyList_secondBorder;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 16px;
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    p {
+                        color: $mainFont_3;
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
+
+                    span {
+                        color: $mainFont_1;
+                        font-size: 14px;
+                        font-weight: bold;
+
+                        &.wait {
+                            color: $mainFont_3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //選單
+    .gameNav {
+        width: 100%;
+        height: 50px;
+
+        ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+
+            .empty {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 30px;
+                    height: 100%;
+                    top: 0;
+                }
+
+                &:first-child {
+                    
+                    &::before {
+                        right: -30px;
+                    }
+                }
+                &:last-child {
+
+                    &::before {
+                        left: -30px;
+                    }
+                }
+            }
+
+            ol {
+                width: 1340px;
+                height: 100%;
+                display: flex;
+                flex-shrink: 0;
+                margin: 0 30px;
+
+                &.sp {
+                    width: auto;
+
+                    li {
+                        width: auto;
+                        padding: 0 20px;
+
+                        &:hover,&:active,&.active {
+
+                            p {
+                                color: $headerNav_agentHover;
+                            }
+                        }
+                    }
+                }
+
+                li {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    cursor: pointer;
+                    margin-right: 35px;
+
+                    &:first-child {
+                        margin-left: 5px;
+                    }
+                    &:last-child {
+                        margin-right: 5px;
+                    }
+
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 30px;
+                        height: 100%;
+                        top: 0;
+                        transition: 0.3s all;
+                    }
+
+                    &::before {
+                        left: -30px;
+                    }
+                    &::after {
+                        right: -30px;
+                    }
+    
+                    &:hover,&:active,&.active {
+
+                        &::before,
+                        &::after {
+                            filter: grayscale(1) brightness(4.2);
+                        }
+
+                        div {
+                            filter: grayscale(1) brightness(4.2);
+                        }
+                        
+                        p {
+                            color: $headerNav_Hover;
+                        }
+                    }
+
+                    div {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        transition: 0.3s all;
+                    }
+
+                    p {
+                        color: $headerNav_Word;
+                        font-size: 18px;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+                        position: relative;
+                        transition: 0.3s all;
+                        z-index: 2;
+                    }
+                }
+            }
+        }
+    }
+
+    //退傭
+    .agent {
+        width: 100%;
+        height: 85px;
+        background: $header_BG_1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 60px;
+
+        .logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+        }
+
+        button {
+            width: 150px;
+            height: 40px;
+            @include secondBtn;
+            margin-right: 16px;
+        }
+
+        .lang {
+            width: auto;
+            height: auto;
+            position: relative;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                pointer-events: none;
+            }
+
+            &::before {
+                width: 1px;
+                height: 30px;
+                background: $header_langBorder;
+                right: 40px;
+            }
+            &::after {
+                width: 5px;
+                height: 5px;
+                border-style: solid;
+                border-width: 0 3px 3px 0;
+                border-color: $header_langBorder;
+                transform: translateY(-50%) rotate(45deg);
+                right: 18px;
+            }
+            
+            select {
+                width: 150px;
+                height: 40px;
+                @include headerLang;
+            }
+        }
+    }
+}

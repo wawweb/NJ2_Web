@@ -1,0 +1,320 @@
+.eventWrap {
+    width: 100%;
+    height: auto;
+
+    //主內容
+    .content {
+        width: 1400px;
+        height: auto;
+        margin: 0 auto 60px;
+
+        .banner {
+            width: 100%;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            margin: 10px 0 16px;
+
+            div {
+                width: auto;
+                height: auto;
+                margin-left: 245px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+
+                .name {
+                    background: $eventWrap_Banner_Title;
+                    background-clip: text;
+                    color: transparent;
+                    font-size: 56px;
+                    font-weight: bold;
+                }
+    
+                .text {
+                    color: $mainFont_2;
+                    font-size: 35px;
+                    font-weight: bold;
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        //marqueeWrap
+        .marqueeWrap {
+            width: 100%;
+            height: auto;
+            margin-bottom: 32px;
+
+            .marquee {
+                width: 100%;
+                height: 52px;
+                background: $marquee_BG;
+                border: solid 1px $marquee_Border;
+                border-radius: 30px;
+                box-shadow: 0 2px 5px 0 $marquee_Shadow inset;
+                display: flex;
+
+                .title {
+                    width: 165px;
+                    height: 100%;
+                    background: $marquee_Linear;
+                    border-radius: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+
+                    p {
+                        color: $marquee_Linear_Word;
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                }
+
+                .textBox {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    overflow: hidden;
+                    
+                    p {
+                        color: $marquee_Word;
+                        font-size: 20px;
+                        font-weight: bold;
+                        white-space: nowrap;
+                        padding-left: 100%;
+                        animation: marquee 10s linear 0s infinite;
+                    }
+                }
+
+                @keyframes marquee {
+                    0% {
+                        transform: translateX(0%);
+                    }
+
+                    100% {
+                        transform: translateX(-100%);
+                    }
+                }
+            }
+        }
+
+        //listBox
+        .listBox {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+
+            li {
+                width: auto;
+                height: 51px;
+                background: $mainColor;
+                border: 1px solid $innerPage_topList_border;
+                transform: skewX(335deg);
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 15px;
+                margin: 0 7px 10px;
+                cursor: pointer;
+
+                p {
+                    display: block;
+                    color: $gameWrap_platformBtn_Word;
+                    font-size: 20px;
+                    font-weight: bold;
+                    transform: skewX(-335deg);
+                }
+
+                &.active {
+                    background: $subLinearActive;
+                    border-color: transparent;
+
+                    i {
+                        background-position-y: 100%;
+                    }
+                    
+                    p {
+                        color: $gameWrap_platformBtn_Active;
+                    }
+                    
+                }
+
+                &:first-child {
+                    margin: 0 7px 0 11px;
+                }
+
+                i {
+                    width: 32px;
+                    height: 32px;
+                    margin-right: 10px;
+                    transform: skewX(-335deg);
+
+                    &.all_ic {
+                        background-position-x: 0;
+                    }
+                    &.sale_ic {
+                        background-position-x: 25%;
+                    }
+                    &.month_ic {
+                        background-position-x: 50%;
+                    }
+                    &.vip_ic {
+                        background-position-x: 75%;
+                    }
+                }
+            }
+        }
+
+        //eventBox
+        .eventBox {
+            width: 100%;
+            height: auto;
+
+            li {
+                width: 100%;
+                height: auto;
+                background: $eventWrap_eventBox_BG;
+                border: solid 1px $eventWrap_eventBox_Border;
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                .imgBox {
+                    width: 100%;
+                    height: 250px;
+                    position: relative;
+                    overflow: hidden;
+
+                    img {
+                        position: absolute;
+                        left: 50%;
+                        top: 0;
+                        transform: translateX(-50%);
+                    }
+                }
+
+                .textBox {
+                    width: 100%;
+                    height: 55px;
+                    border-top: solid 1px $eventWrap_eventBox_Border;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    padding: 0 16px;
+
+                    .star_ic {
+                        width: 19px;
+                        height: 19px;
+                        margin-right: 10px;
+                    }
+
+                    p {
+                        color: $mainFont_3;
+                        font-size: 25px;
+                        font-weight: bold;
+                    }
+
+                    button {
+                        width: auto;
+                        height: 55px;
+                        @include eventBtn;
+                        padding: 0 20px 3px;
+                        position: absolute;
+                        right: 16px;
+                        top: -25px;
+
+                        i {
+                            width: 19px;
+                            height: 21px;
+                            margin-left: 20px;
+                            filter: grayscale(1) brightness(15);
+                        }
+                    }
+                }
+            }
+        }
+
+        .pageBox {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            margin-top: 50px;
+
+            .line {
+                width: 100%;
+                height: 1px;
+                background: $page_line;
+            }
+
+            .page {
+                width: auto;
+                height: auto;
+                display: flex;
+                align-items: center;
+                flex-shrink: 0;
+                margin: 0 10px;
+
+                i {
+                    width: 16px;
+                    height: 9px;
+                    transform: rotate(90deg);
+                    cursor: pointer;
+
+                    &.prev {
+                        transform: rotate(-90deg);
+                        filter: grayscale(1) brightness(4);
+                    }
+                }
+
+                ul {
+                    width: auto;
+                    height: auto;
+                    display: flex;
+
+                    li {
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 50%;
+                        color: $page_Color;
+                        font-size: 12px;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 3px;
+                        box-sizing: content-box;
+                        padding: 1px 1px 2px;
+                        cursor: pointer;
+
+                        &:hover,&:active,&.active {
+                            background: $page_ActiveBG;
+                            color: $page_Active;
+                        }
+                    }
+                }
+            }
+        }
+
+        .pageWord {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            margin-top: 5px;
+
+            p {
+                color: $page_Color;
+                font-size: 12px;
+                font-weight: bold;
+            }
+        }
+    }
+}

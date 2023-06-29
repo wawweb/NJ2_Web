@@ -1,0 +1,484 @@
+.ad {
+    width: 1400px;
+    height: 497px;
+    margin: 10px auto 0;
+
+    .single-item {
+        margin: 0;
+        cursor: pointer;
+
+        .slick-slide {
+            outline: none;
+        }
+
+        // .slick-arrow {
+        //     z-index: 1;
+        //     width: 285px;
+        //     height: 494px;
+
+        //     &::before {
+        //         content: "";
+        //         position: absolute;
+        //         top: 50%;
+        //         left: 50%;
+        //         transform: translate(-50%,-50%) rotate(-45deg);
+        //         width: 15px;
+        //         height: 15px;
+        //         border: solid 6px $ad_Arrow;
+        //         border-width: 2px 0 0 2px;
+        //     }
+
+        //     &.slick-prev {
+        //         left: 0px;
+        //     }
+
+        //     &.slick-next {
+        //         right: 0px;
+                
+        //         &::before {
+        //             transform: translate(-50%,-50%) rotate(45deg) scaleX(-1);
+        //         }
+        //     }
+        // }
+
+        .slick-dots {
+            bottom: 0px;
+
+            li {
+                margin: 0 5px;
+
+                &.slick-active {
+
+                    button {
+
+                        &::before {
+                            @include ad_Dot_Active;
+                        }
+                    }
+                }
+
+                button {
+
+                    &::before {
+                        width: 15px;
+                        height: 15px;
+                        @include ad_Dot;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.multiple-items.card {
+    width: 1000px;
+    height: 320px;
+    margin: 0 auto 90px !important;
+
+    .slick-list {
+        height: 100%;
+
+        .slick-track {
+            top: 75px;
+
+            li {
+    
+                &.slick-center {
+                    
+                    .cardBG {
+                        transform: scale(1.2) rotate(-15deg);
+                    }
+
+                    .shadow {
+                        transform: translateY(40px);
+                    }
+                }
+    
+                .cardBG {
+                    width: 249px;
+                    height: 145px;
+                    margin: 0 auto;
+                    transition: 0.3s all;
+                    position: relative;
+
+                    &.auditing {
+                        
+                        .audit {
+                            display: block;
+                        }
+                    }
+
+                    .audit {
+                        display: none;
+                        width: 89px;
+                        height: 23px;
+                        position: absolute;
+                        top: 15px;
+                        left: 0;
+                    }
+
+                    .nameBox {
+                        width: auto;
+                        height: auto;
+                        position: absolute;
+                        top: 10px;
+                        right: 20px;
+                        text-align: right;
+
+                        p {
+                            color: $innerPage_Card_Word;
+                            font-size: 14px;
+                            font-weight: bold;
+                            text-shadow: -1px 2px 2px $innerPage_Card_Shadow;
+
+                            &:first-child {
+                                font-size: 18px;
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+
+                    .num {
+                        width: 100%;
+                        color: $innerPage_Card_Word;
+                        font-size: 21px;
+                        font-weight: bold;
+                        text-shadow: -1px 2px 2px $innerPage_Card_Shadow;
+                        text-align: center;
+                        letter-spacing: 1px;
+                        position: absolute;
+                        left: 0;
+                        bottom: 20px;
+                    }
+                }
+
+                .shadow {
+                    width: 245px;
+                    height: 53px;
+                    margin: 0 auto;
+                    opacity: 0.4;
+                    transition: 0.3s all;
+                }
+            }
+        }
+    }
+
+    .slick-arrow {
+        z-index: 1;
+        width: 18px;
+        height: 32px;
+
+        &:hover,&:active,&.active {
+            opacity: 1;
+        }
+
+        &::before {
+            display: none;
+        }
+
+        &.slick-prev {
+            left: -25px;
+        }
+
+        &.slick-next {
+            right: -25px;
+            transform: scaleX(-1);
+        }
+    }
+
+    .slick-dots {
+        bottom: -70px;
+
+        li {
+            width: 45px;
+            height: 26px;
+            margin: 0 10px;
+
+            &.slick-active {
+
+                button {
+
+                    &::before {
+                        transform: scale(1.2);
+                        @include innerPage_Dot_Active;
+                    }
+                }
+            }
+
+            button {
+                width: 100%;
+                height: 100%;
+
+                &::before {
+                    width: 100%;
+                    height: 100%;
+                    color: transparent;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.multiple-items.vip {
+    width: 1000px;
+    height: 320px;
+    margin: 0 auto 90px !important;
+
+    .slick-list {
+        height: 100%;
+
+        .slick-track {
+            top: 75px;
+
+            li {
+    
+                &.slick-center {
+
+                    &.vip0 {
+
+                        .levelBG {
+    
+                            .levelCnt {
+                                @include levelCardStyle_0;
+
+                                .innerBox {
+                                    border-color: $levelCardStyle_0_innerBorder;
+
+                                    .smallTitle {
+                                        color: $levelCardStyle_0_innerTitle
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.vip2 {
+
+                        .levelBG {
+    
+                            .levelCnt {
+                                @include levelCardStyle_2;
+
+                                .innerBox {
+                                    border-color: $levelCardStyle_2_innerBorder;
+
+                                    .smallTitle {
+                                        color: $levelCardStyle_2_innerTitle
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.vip3 {
+    
+                        .levelBG {
+    
+                            .levelCnt {
+                                @include levelCardStyle_3;
+
+                                .innerBox {
+                                    border-color: $levelCardStyle_3_innerBorder;
+
+                                    .smallTitle {
+                                        color: $levelCardStyle_3_innerTitle
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.vip4 {
+    
+                        .levelBG {
+    
+                            .levelCnt {
+                                @include levelCardStyle_4;
+
+                                .innerBox {
+                                    border-color: $levelCardStyle_4_innerBorder;
+
+                                    .smallTitle {
+                                        color: $levelCardStyle_4_innerTitle
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.vip5 {
+    
+                        .levelBG {
+    
+                            .levelCnt {
+                                @include levelCardStyle_5;
+
+                                .innerBox {
+                                    border-color: $levelCardStyle_5_innerBorder;
+
+                                    .smallTitle {
+                                        color: $levelCardStyle_5_innerTitle
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.vip6 {
+    
+                        .levelBG {
+    
+                            .levelCnt {
+                                @include levelCardStyle_6;
+
+                                .innerBox {
+                                    border-color: $levelCardStyle_6_innerBorder;
+
+                                    .smallTitle {
+                                        color: $levelCardStyle_6_innerTitle
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    .levelBG {
+                        width: 440px;
+                        transform: scale(1.2);
+
+                        .levelCnt {
+                            width: 66.7%;
+                            border-width: 2px;
+                        }
+                    }
+
+                    .shadow {
+                        transform: translateY(40px) scaleX(1.5);
+                    }
+                }
+    
+                .levelBG {
+                    width: 144px;
+                    height: auto;
+                    margin: 0 auto;
+                    transition: 0.5s all;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+
+                    .levelMedal {
+                        width: 144px;
+                        height: 158px;
+                        flex-shrink: 0;
+                        position: relative;
+                        z-index: 1;
+                        filter: drop-shadow(1px 2px 3px #00000080);
+                    }
+
+                    .levelCnt {
+                        width: 0;
+                        height: 156px;
+                        @include levelCardStyle_1;
+                        border-width: 0;
+                        flex-shrink: 0;
+                        transition: 0.5s all;
+                        margin-left: -96px;
+
+                        .innerBox {
+                            width: 94%;
+                            height: 90%;
+                            border: solid 2px $levelCardStyle_1_innerBorder;
+                            border-radius: 28px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            padding: 10px 0 10px 100px;
+                            overflow: hidden;
+
+                            .smallTitle {
+                                color: $levelCardStyle_1_innerTitle;
+                                font-size: 20px;
+                                font-weight: bold;
+                                white-space: nowrap;
+                            }
+
+                            .text {
+                                color: $mainFont_3;
+                                font-size: 14px;
+                                font-weight: bold;
+                                white-space: nowrap;
+
+                                span {
+                                    display: block;
+                                    color: $mainFont_1;
+                                    margin-top: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .shadow {
+                    width: 245px;
+                    height: 53px;
+                    margin: 0 auto;
+                    opacity: 0.4;
+                    transition: 0.5s all;
+                }
+            }
+        }
+    }
+
+    .slick-arrow {
+        z-index: 1;
+        width: 18px;
+        height: 32px;
+
+        &:hover,&:active,&.active {
+            opacity: 1;
+        }
+
+        &::before {
+            display: none;
+        }
+
+        &.slick-prev {
+            left: -25px;
+        }
+
+        &.slick-next {
+            right: -25px;
+            transform: scaleX(-1);
+        }
+    }
+
+    .slick-dots {
+        bottom: -70px;
+
+        li {
+            width: 13px;
+            height: 13px;
+            margin: 0 10px;
+
+            &.slick-active {
+
+                button {
+
+                    &::before {
+                        transform: scale(1.5);
+                        filter: grayscale(0);
+                    }
+                }
+            }
+
+            button {
+                width: 100%;
+                height: 100%;
+
+                &::before {
+                    width: 100%;
+                    height: 100%;
+                    color: transparent;
+                    opacity: 1;
+                    filter: grayscale(1);
+                }
+            }
+        }
+    }
+}

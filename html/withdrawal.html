@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.25">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/javascript.js"></script>
+    <link rel="shortcut icon" href="../images/NJLOGO_64x64.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <!--上部-->
+        <div class="top">
+            <!--logo-->
+            <img class="logo" src="../images/icon/xmas_logo.png" onclick="window.location.href='./innerIndex.html'">
+            <!--右_已登入-->
+            <ul class="user alLogin">
+                <!--等級-->
+                <li class="lv">
+                    初心者
+                    <span>userName</span>
+                </li>
+                <!--各平台金額-->
+                <li class="moneyTotal">
+                    <p class="total">¥0.00</p>
+                </li>
+                <li>
+                    <button onclick="window.location.href='./deposit.html'">入金</button>
+                </li>
+                <li>
+                    <button onclick="window.location.href='./transfer.html'">振替</button>
+                </li>
+                <li>
+                    <button onclick="window.location.href='./withdrawal.html'">出金</button>
+                </li>
+                <li>
+                    <button onclick="window.location.href='./member.html'">マイページ</button>
+                </li>
+                <li>
+                    <button onclick="window.location.href='./mail.html'">
+                        インボックス
+                        <p class="remind display">2</p>
+                    </button>
+                </li>
+                <li>
+                    <button onclick="window.location.href='../index.html'">ログアウト</button>
+                </li>
+                <li class="lang">
+                    <select>
+                        <option>繁體中文</option>
+                        <option>简体中文</option>
+                        <option>ENGLISH</option>
+                        <option selected>日本語</option>
+                    </select>
+                </li>
+            </ul>
+            <ul class="transferInfo">
+                <li>
+                    <div>
+                        <p>36588 SPORTS</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>PNG</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>HABANERO</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>BOONGO GAMES</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>RED TIGER GAMES</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p>GoldenHero</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>AG CASINO</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>NETENT GAMES</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>Microgaming</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>NO LIMIT CITY</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p>RSG GAMES</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>AG GAMES</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>IFUN GAMES</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>YGG</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>JILI SLOTS</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p>EVO PLAY</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>PP CASINO</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>RELAX</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>AUX</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>MG CASINO</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p>PP SLOTS</p>
+                        <span class="wait">メンテナンス中</span>
+                    </div>
+                    <div>
+                        <p>QUICKSPIN GAMES</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>ELYSIUM GAMES</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>ELK GAMES</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>4ThePlayer GAMES</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p>RED RAKE GAMES</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>BLUEPRINT GAMES</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>PLAYSON GAMES</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>DG CASINO</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>SIMPLEPLAY GAMES</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p>TPG GAMES</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>SA CASINO</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>OG PLUS CASINO</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>WM CASINO</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div>
+                        <p>ALL BET CASINO</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p>EVO CASINO</p>
+                        <span>¥ 0.00</span>
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </li>
+            </ul>
+        </div>
+        <!--選單-->
+        <div class="gameNav">
+            <ul>
+                <li class="empty"></li>
+                <ol>
+                    <li class="homeBtn" onclick="window.location.href='./innerIndex.html'">
+                        <div></div>
+                        <p>ホームページ</p>
+                    </li>
+                    <li class="sportBtn" onclick="window.location.href='./sportPage.html'">
+                        <div></div>
+                        <p>スポーツ</p>
+                    </li>
+                    <li class="liveBtn" onclick="window.location.href='./livePage.html'">
+                        <div></div>
+                        <p>ライブ</p>
+                    </li>
+                    <li class="slotBtn" onclick="window.location.href='./slotPage.html'">
+                        <div></div>
+                        <p>スロット</p>
+                    </li>
+                    <li class="fishBtn" onclick="window.location.href='./fishPage.html'">
+                        <div></div>
+                        <p>釣りゲーム</p>
+                    </li>
+                    <li class="boardBtn" onclick="window.location.href='./boardPage.html'">
+                        <div></div>
+                        <p>カードゲーム</p>
+                    </li>
+                    <li class="event" onclick="window.location.href='./event.html'">
+                        <div></div>
+                        <p>プロモーション</p>
+                    </li>
+                    <li class="vip" onclick="window.location.href='./vip.html'">
+                        <div></div>
+                        <p>VIPクラブ</p>
+                    </li>
+                </ol>
+                <li class="empty"></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="innerPage">
+            <!--內容-->
+            <div class="center">
+                <!--banner-->
+                <div class="banner">
+                    <!--跑馬燈-->
+                    <div class="marqueeWrap">
+                        <div class="marquee">
+                            <div class="title">
+                                <p>最新ニュース</p>
+                            </div>
+                            <div class="textBox">
+                                <p>プロモーション~ライブカジノリベートボーナス</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--bottom-->
+                    <div class="bottom">
+                        <!--狀態列-->
+                        <div class="left">
+                            <div class="medal">
+                                <div></div>
+                            </div>
+                            <div class="textBox">
+                                <p class="name">
+                                    opp121
+                                    <span>ゴールド会員</span>
+                                </p>
+                                <p class="time">参加182日</p>
+                            </div>
+                        </div>
+                        <!--按鈕列-->
+                        <div class="right">
+                            <button onclick="window.location.href='./deposit.html'">
+                                <i class="quickBtn_ic deposit"></i>
+                                入金
+                            </button>
+                            <button onclick="window.location.href='./transfer.html'">
+                                <i class="quickBtn_ic transfer"></i>
+                                振替
+                            </button>
+                            <button class="active" onclick="window.location.href='./withdrawal.html'">
+                                <i class="quickBtn_ic withdrawal"></i>
+                                出金
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--mainWrap-->
+                <div class="innerMainWrap">
+                    <!--leftSide-->
+                    <div class="leftSide">
+                        <div class="line_long">
+                            <div>
+                                <i class="star_ic"></i>
+                                <i class="line_short"></i>
+                            </div>
+                            <div>
+                                <i class="line_short"></i>
+                                <i class="line_short"></i>
+                                <i class="line_short"></i>
+                                <i class="star_ic"></i>
+                            </div>
+                        </div>
+                        <ul class="btnBox">
+                            <li onclick="window.location.href='./member.html'">
+                                個人情報
+                                <i class="member_ic"></i>
+                            </li>
+                            <li onclick="window.location.href='./vip.html'">
+                                VIPクラブ
+                                <i class="vip_ic"></i>
+                            </li>
+                            <li onclick="window.location.href='./invite.html'">
+                                メンバーを招待する
+                                <i class="invite_ic"></i>
+                            </li>
+                            <li onclick="window.location.href='./wallet.html'">
+                                マイウォレット
+                                <i class="wallet_ic"></i>
+                            </li>
+                            <li onclick="window.location.href='./bankCard.html'">
+                                口座設定
+                                <i class="card_ic"></i>
+                            </li>
+                            <li onclick="window.location.href='./dealRecord.html'">
+                                取引履歷
+                                <i class="dealRecord_ic"></i>
+                            </li>
+                            <li onclick="window.location.href='./point.html'">
+                                ∞4世代ボーナス報酬
+                                <i class="point_ic"></i>
+                            </li>
+                            <li onclick="window.location.href='./betRecord.html'">
+                                ベット履歷
+                                <i class="bettingRecord_ic"></i>
+                            </li>
+                            <li onclick="window.location.href='./eventApply.html'">
+                                プロモーション申請
+                                <i class="eventApply_ic"></i>
+                            </li>
+                            <li onclick="window.location.href='./mail.html'">
+                                インボックス
+                                <i class="mail_ic"></i>
+                            </li>
+                            <li onclick="window.location.href='./agent.html'">
+                                アフィリエイト
+                                <i class="agent_ic"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--withdrawal-->
+                    <div class="rightSide withdrawal">
+                        <div class="title">
+                            <i class="firstIcon withdrawal_ic"></i>
+                            <p>出金</p>
+                            <div class="line"></div>
+                            <div class="star_ic"></div>
+                        </div>
+                        <!--moneyBox-->
+                        <div class="moneyBox">
+                            <div class="box">
+                                <div class="smallTitle">
+                                    <p>メインウォレット</p>
+                                    <i class="re_ic"></i>
+                                </div>
+                                <div class="amount">
+                                    <p>$</p>
+                                    <p>1,000.00</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="smallTitle">
+                                    <p>ベット額制限</p>
+                                    <button>ベット額履歴</button>
+                                </div>
+                                <div class="amount">
+                                    <p>$</p>
+                                    <p>1,000.00</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="smallTitle">
+                                    <p>出金可能額</p>
+                                </div>
+                                <div class="amount">
+                                    <p>$</p>
+                                    <p>0.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="title">
+                            <i class="smallStar_ic"></i>
+                            <p>プラットフォームウォレット</p>
+                            <div class="line"></div>
+                        </div>
+                        <!--moneyList-->
+                        <div class="moneyList">
+                            <button class="openBtn display">
+                                オープン
+                                <i class="dbArrow_ic"></i>
+                            </button>
+                            <ul>
+                                <li>
+                                    <p class="name">36588 SPORTS</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">PNG</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">MICROGAMING</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">GOLDENHERO</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">ALLBET</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">ELYSIUM</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">SA CASINO</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">PP CASINO</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">YGG</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">WM CASINO</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">RED RAKE</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">PLAYSON</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">4ThePlayer</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">EVO CASINO</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">IFUN</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">RELAX</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">DG CASINO</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">BOOONGO</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">MG CASINO</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">PP SLOT</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">HABANERO</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">NO LIMIT CITY</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">DG CASINO</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">QUICKSPIN</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">SIMPLEPLAY</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">BLUEPRINT</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">ELK</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">OG PLUS CASINO</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">JIJL</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">RSG</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">AUX</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">AG CASINO</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="name">EVOPLAY</p>
+                                    <p class="amount">
+                                        $0.00
+                                        <i class="re_ic"></i>
+                                    </p>
+                                </li>
+                            </ul>
+                            <button class="closeBtn">
+                                クローズ
+                                <i class="dbArrow_ic"></i>
+                            </button>
+                        </div>
+                        <!-- <div class="openBtn">
+                            <p>オープン</p>
+                            <i class="dbArrow_ic"></i>
+                        </div> -->
+                        <div class="title">
+                            <i class="smallStar_ic"></i>
+                            <p>出金申請</p>
+                            <div class="line"></div>
+                        </div>
+                        <!--withdrawalApply-->
+                        <div class="applyBox">
+                            <ul>
+                                <li>
+                                    <p class="name">出金の数</p>
+                                    <p class="amount">無制限</p>
+                                    <p class="remind">(今日利用可能な回数)</p>
+                                </li>
+                                <li>
+                                    <p class="name">出金限度額</p>
+                                    <p class="amount">無制限</p>
+                                    <p class="remind">(毎日出金限度額)</p>
+                                </li>
+                                <li>
+                                    <p class="name">単回限度額</p>
+                                    <p class="amount">3,000,000</p>
+                                    <p class="remind">(単回出金上限金額)</p>
+                                </li>
+                                <li>
+                                    <p class="name">毎日無料出金の最大数</p>
+                                    <p class="amount">0</p>
+                                    <p class="remind">&ensp;</p>
+                                </li>
+                            </ul>
+                            <div class="box">
+                                <p class="smallTitle">
+                                    <em>※</em>
+                                    出金方法
+                                </p>
+                                <label class="selectBox">
+                                    <select>
+                                        <option value="">選んでください</option>
+                                        <option value="">選んでください</option>
+                                        <option value="">選んでください</option>
+                                        <option value="">選んでください</option>
+                                    </select>
+                                    <i class="arrow_ic"></i>
+                                </label>
+                                <p class="smallTitle">
+                                    <em>※</em>
+                                    出金金額
+                                </p>
+                                <label class="inputBox">
+                                    <input type="text" value="0">
+                                </label>
+                                <p class="remind">単一出金額は「$5,000〜$3,000,000」でなければなりません</p>
+                                <button>確認</button>
+                            </div>
+                            <div class="remindBox">
+                                <div class="smallTitle">
+                                    <div class="line"></div>
+                                    <i class="smallStar_ic"></i>
+                                    <p>ご注意</p>
+                                    <i class="smallStar_ic"></i>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="content">
+                                    <p>口座設定を設定してないと該当入金方法はご利用できません， 例えばUSDTをご利用されたい場合、USDTの口座設定を事前に行って頂く必要となります。</p>
+                                    <p>銀行の入出金に関しまして、出金の際銀行の営業時間に基づき、日本時間の09:00-23:00の間での受付となります。受付時間を超えますと、翌営業の反映となります。</p>
+                                    <p>入金につきまして、各銀行間異なるため、15:00以降に入金したものに対し、翌営業日の反映になる可能性がございます。予めご了承ください。</p>
+                                </div>
+                                <div class="content">
+                                    <p>1.出金をスムーズにさせる為、最初にすべてのゲームプラットフォームウォレットをメインウォレットへ戻してください。</p>
+                                    <p>2.メンバーは、申し込む前に、各入金の有効な賭け金の 100% に到達する必要があります。</p>
+                                </div>
+                                <div class="content">
+                                    <p class="remind">PS. 当サイトを使用してマネーロンダリングや詐欺行為やその他の法令に抵触し犯罪行為となどの不当利用。当サイトは該当アカウントで得たすべてのボーナス、勝ち金を没収し、アカウントを直ちに閉鎖する権利を有します。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <nav class="sideBar">
+        <!-- 邀請朋友 -->
+        <button class="inviteFriend" type="button"></button>
+        <!--goTop-->
+        <button class="goTop">
+            <i></i>
+            <p>TOP</p>
+        </button>
+    </nav>
+    <footer>
+        <div class="center">
+            <!--top-->
+            <div class="top">
+                <ul class="listBox">
+                    <li class="list">
+                        <p class="title">最新のお知らせ</p>
+                        <ul>
+                            <li class="openNews">
+                                <i></i>
+                                <p>人気</p>
+                            </li>
+                            <li class="openNews">
+                                <i></i>
+                                <p>ノーマル</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list">
+                        <p class="title">よくある質問</p>
+                        <ul>
+                            <li onclick="window.location.href='./help.html'">
+                                <i></i>
+                                <p>プロモーション</p>
+                            </li>
+                            <li onclick="window.location.href='./help.html'">
+                                <i></i>
+                                <p>入出金と振替</p>
+                            </li>
+                            <li onclick="window.location.href='./help.html'">
+                                <i></i>
+                                <p>入出金方法</p>
+                            </li>
+                            <li onclick="window.location.href='./help.html'">
+                                <i></i>
+                                <p class="small">登録とアカウント</p>
+                            </li>
+                            <li onclick="window.location.href='./help.html'">
+                                <i></i>
+                                <p>アフィリエイト</p>
+                            </li>
+                            <li onclick="window.location.href='./help.html'">
+                                <i></i>
+                                <p>お問い合わせ</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list">
+                        <p class="title">当社について</p>
+                        <ul>
+                            <li onclick="window.location.href='./help.html'">
+                                <i></i>
+                                <p>当社について</p>
+                            </li>
+                            <li onclick="window.location.href='./help.html'">
+                                <i></i>
+                                <p class="small">プライバシーポリシー</p>
+                            </li>
+                            <li onclick="window.location.href='./help.html'">
+                                <i></i>
+                                <p>利用規約</p>
+                            </li>
+                            <li onclick="window.location.href='./help.html'">
+                                <i></i>
+                                <p class="small">責任あるゲーミング</p>
+                            </li>
+                            <li onclick="window.location.href='./help.html'">
+                                <i></i>
+                                <p>プロモーション</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list">
+                        <p class="title">VIPメンバー</p>
+                        <ul>
+                            <li onclick="window.location.href='./vip.html'">
+                                <i></i>
+                                <p>VIPレベル</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="linkBox">
+                    <button>チャット</button>
+                    <!-- <iframe class="iframe-box" src="https://licensing.gaming-curacao.com/validator/?lh=4409a740c9e834ebacf02796815cd15f&amp;template=seal"></iframe> -->
+                    <button class="link"></button>
+                    <a class="twitter" href="https://twitter.com"></a>
+                </div>
+            </div>
+            <!--separate-->
+            <div class="separateBox">
+                <p>GAME PROVIDERS</p>
+                <div class="line"></div>
+                <div class="star"></div>
+            </div>
+            <!--bottom-->
+            <div class="bottom">
+                <ul>
+                    <li>
+                        <div class="net"></div>
+                        <div class="sa"></div>
+                        <div class="dg"></div>
+                        <div class="gh"></div>
+                        <div class="og"></div>
+                        <div class="sp"></div>
+                        <div class="jili"></div>
+                        <div class="elk"></div>
+                        <div class="bp"></div>
+                        <div class="evo"></div>
+                        <div class="ftp"></div>
+                    </li>
+                    <li>
+                        <div class="bng"></div>
+                        <div class="ab"></div>
+                        <div class="pls"></div>
+                        <div class="rsg"></div>
+                        <div class="ag"></div>
+                        <div class="tpg"></div>
+                    </li>
+                    <li>
+                        <div class="ely"></div>
+                        <div class="qs"></div>
+                        <div class="atux"></div>
+                        <div class="evoplay"></div>
+                        <div class="sport"></div>
+                        <div class="pg"></div>
+                        <div class="png"></div>
+                        <div class="mg"></div>
+                        <div class="pp"></div>
+                        <div class="redrake"></div>
+                    </li>
+                    <li>
+                        <div class="nolimit"></div>
+                        <div class="ifun"></div>
+                        <div class="wm"></div>
+                        <div class="ygg"></div>
+                        <div class="relax"></div>
+                        <div class="redtiger"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="base"></div>
+    </footer>
+    <div class="filter display">
+        <!--最新公告-->
+        <div class="jumpWindow news">
+            <div class="title">
+                <p>最新のお知らせ</p>
+                <i class="close_ic"></i>
+            </div>
+            <div class="box">
+                <div class="infoBox active">
+                    <ul>
+                        <li class="smallTitle">
+                            <i class="flower_ic"></i>
+                            <p>人気</p>
+                            <i class="arrow_ic"></i>
+                        </li>
+                        <li>
+                            <p>人気ゲーム-日本麻雀</p>
+                        </li>
+                        <li>
+                            <p>人気ゲーム-日本麻雀人気ゲーム-日本麻雀人気ゲーム-日本麻雀</p>
+                        </li>
+                        <li>
+                            <p>人気ゲーム-日本麻雀人気ゲーム-日本麻雀人気ゲーム-日本麻雀人気ゲーム-日本麻雀人気ゲーム-日本麻雀人気ゲーム-日本麻雀</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="infoBox">
+                    <ul>
+                        <li class="smallTitle">
+                            <i class="flower_ic"></i>
+                            <p>入金</p>
+                            <i class="arrow_ic"></i>
+                        </li>
+                        <li>
+                            <p>人気ゲーム-日本麻雀</p>
+                        </li>
+                        <li>
+                            <p>人気ゲーム-日本麻雀人気ゲーム-日本麻雀人気ゲーム-日本麻雀</p>
+                        </li>
+                        <li>
+                            <p>人気ゲーム-日本麻雀人気ゲーム-日本麻雀人気ゲーム-日本麻雀人気ゲーム-日本麻雀人気ゲーム-日本麻雀人気ゲーム-日本麻雀</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="infoBox">
+                    <ul>
+                        <li class="smallTitle">
+                            <i class="flower_ic"></i>
+                            <p>ノーマル</p>
+                            <i class="arrow_ic"></i>
+                        </li>
+                        <li>
+                            <p>人気ゲーム-日本麻雀</p>
+                        </li>
+                        <li>
+                            <p>人気ゲーム-日本麻雀人気ゲーム-日本麻雀人気ゲーム-日本麻雀</p>
+                        </li>
+                        <li>
+                            <p>人気ゲーム-日本麻雀人気ゲーム-日本麻雀人気ゲーム-日本麻雀人気ゲーム-日本麻雀人気ゲーム-日本麻雀人気ゲーム-日本麻雀</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--單純轉跳彈窗-->
+        <div class="jumpWindow plsGo display">
+            <div class="title">
+                <p>ヒント</p>
+                <i class="close_ic"></i>
+            </div>
+            <div class="content">
+                <p>先にログインください</p>
+            </div>
+            <button class="close">確認</button>
+        </div>
+        <!--loading-->
+        <div class="jumpWindow loading">
+            <div class="title">
+                <p>ヒント</p>
+            </div>
+            <div class="content">
+                <div></div>
+                <p>loading...</p>
+            </div>
+        </div>
+    </div>
+    <div class="bg inner"></div>
+</body>
+</html>

@@ -1,0 +1,697 @@
+.agentWrap {
+    width: 100%;
+    height: auto;
+    padding-top: 5px;
+    overflow: hidden;
+    display: none;
+
+    &.display {
+        display: block
+    }
+    
+    .topBanner {
+        width: 100%;
+        height: auto;
+        padding-top: 29%;
+    }
+
+    .agentType {
+        width: 1400px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+
+        .title {
+            color: $agent_Color_1;
+            font-size: 140px;
+            font-weight: bold;
+        }
+
+        .sub {
+            width: 1050px;
+            height: 85px;
+            border-bottom: solid 3px $agent_Border;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border-style: solid;
+                border-width: 0 3px 3px 0;
+                border-color: transparent $agent_Border $agent_Border transparent;
+                transform: rotate(45deg);
+                bottom: -14px;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 21px;
+                height: 21px;
+                background: $agent_BG_1;
+                transform: rotate(45deg);
+                bottom: -10px;
+            }
+
+            p {
+                color: $mainFont_1;
+                font-size: 31px;
+                font-weight: bold;
+            }
+        }
+
+        .typeImg {
+            width: 1213px;
+            height: 0;
+            padding-top: 47%;
+            margin: 60px 0;
+        }
+    }
+
+    .introBox {
+        width: 100%;
+        min-width: 1400px;
+        height: auto;
+        background: $agent_BG_2;
+        position: relative;
+        padding: 52px 0 110px;
+        margin-bottom: 60px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background: $agent_BG_1;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            top: -12px;
+        }
+
+        .center {
+            width: 1400px;
+            height: auto;
+            position: relative;
+            margin: 0 auto;
+            
+            ul {
+                width: 100%;
+                height: auto;
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                gap: 0 35px;
+                
+                li {
+                    width: auto;
+                    height: auto;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 36px;
+                        height: 36px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: -30px;
+                    }
+
+                    &:last-child {
+
+                        &::before {
+                            display: none;
+                        }
+                    }
+
+                    .title {
+                        color: $mainFont_1;
+                        font-size: 50px;
+                        font-weight: bold;
+                        line-height: 60px;
+                        margin-bottom: 10px;
+
+                        span {
+                            font-size: 40px;
+                        }
+                    }
+
+                    .sub {
+                        height: 108px;
+                        color: $agent_Color_2;
+                        font-size: 22px;
+                        font-weight: bold;
+                        line-height: 27px;
+                    }
+
+                    .introImg {
+                        width: 318px;
+                        height: 277px;
+                        margin-top: 40px;
+
+                        &.p1 {
+                            background-position-x: 0;
+                        }
+                        &.p2 {
+                            background-position-x: 25%;
+                        }
+                        &.p3 {
+                            background-position-x: 50%;
+                        }
+                        &.p4 {
+                            background-position-x: 75%;
+                        }
+                    }
+                }
+            }
+
+            .introIC_1 {
+                width: 230px;
+                height: 252px;
+                position: absolute;
+                top: -185px;
+                right: -190px;
+            }
+        }
+    }
+
+    .systemBox {
+        width: 1400px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+
+        .titleBox {
+            width: 1050px;
+            height: auto;
+            border-bottom: solid 3px $agent_Border;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding-bottom: 40px;
+            margin-bottom: 20px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border-style: solid;
+                border-width: 0 3px 3px 0;
+                border-color: transparent $agent_Border $agent_Border transparent;
+                transform: rotate(45deg);
+                bottom: -14px;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 21px;
+                height: 21px;
+                background: $agent_BG_1;
+                transform: rotate(45deg);
+                bottom: -10px;
+            }
+
+            .title {
+                color: $agent_Color_1;
+                font-size: 140px;
+                font-weight: bold;
+                margin-bottom: 40px;
+            }
+
+            .sub {
+                color: $mainFont_1;
+                font-size: 31px;
+                font-weight: bold;
+                text-align: center;
+                line-height: 38px;
+            }
+
+            .systemIC_1 {
+                width: 126px;
+                height: 313px;
+                position: absolute;
+                left: -45px;
+                bottom: 0;
+            }
+
+            .systemIC_2 {
+                width: 308px;
+                height: 296px;
+                position: absolute;
+                right: -185px;
+                bottom: 10px;
+            }
+        }
+
+        .systemImg {
+            width: 1398px;
+            height: 0;
+            padding-top: 44%;
+        }
+
+        .tableBox {
+            width: 1220px;
+            height: auto;
+            position: relative;
+            margin: 20px 0 60px;
+
+            table {
+                width: 100%;
+                height: auto;
+                background: $table_agent_BG;
+                border-radius: 10px;
+                box-shadow: 0 0 0 1px $table_agent_Border;
+                overflow: hidden;
+
+                tr {
+
+                    &:nth-of-type(2n + 1) {
+                        
+                        td {
+                            background: $table_agent_secondBG;
+                        }
+                    }
+
+                    th {
+                        height: 60px;
+                        background: $table_agent_TitleBG;
+                        vertical-align: middle;
+
+                        p {
+                            width: 100%;
+                            color: $table_agent_Title;
+                            font-size: 25px;
+                            font-weight: bold;
+                            text-align: center;
+                            @include textHidden;
+                        }
+                    }
+
+                    td {
+                        width: 50%;
+                        height: 60px;
+                        vertical-align: middle;
+
+                        &:last-child {
+
+                            p {
+                                border: none;
+                            }
+                        }
+
+                        p {
+                            width: 100%;
+                            border-right: solid 1px $table_agent_Border;
+                            color: $agent_Color_2;
+                            font-size: 25px;
+                            font-weight: bold;
+                            text-align: center;
+                            @include textHidden;
+                        }
+                    }
+                }
+            }
+
+            .systemIC_3 {
+                width: 173px;
+                height: 323px;
+                position: absolute;
+                left: -84px;
+                bottom: -50px;
+            }
+
+            .systemIC_4 {
+                width: 472px;
+                height: 107px;
+                position: absolute;
+                right: -30px;
+                top: -35px;
+            }
+
+            .systemIC_5 {
+                width: 118px;
+                height: 169px;
+                position: absolute;
+                right: -12px;
+                bottom: -34px;
+            }
+        }
+
+        .smallTitle {
+            color: $agent_Color_1;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .smallSub {
+            color: $mainFont_1;
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 60px;
+        }
+    }
+
+    .applyBox {
+        width: 100%;
+        height: auto;
+        background: $agent_BG_2;
+        padding-top: 60px;
+
+        .agentCenter {
+            width: 1400px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+
+            .title {
+                color: $agent_Color_1;
+                font-size: 70px;
+                font-weight: bold;
+            }
+
+            .sub {
+                width: 1050px;
+                height: 85px;
+                border-bottom: solid 3px $agent_Border;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+    
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    border-style: solid;
+                    border-width: 0 3px 3px 0;
+                    border-color: transparent $agent_Border $agent_Border transparent;
+                    transform: rotate(45deg);
+                    bottom: -14px;
+                }
+    
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 21px;
+                    height: 21px;
+                    background: $agent_BG_2;
+                    transform: rotate(45deg);
+                    bottom: -10px;
+                }
+    
+                p {
+                    color: $mainFont_1;
+                    font-size: 31px;
+                    font-weight: bold;
+                }
+            }
+
+            button {
+                width: 597px;
+                height: 119px;
+                margin: 50px 0;
+            }
+        }
+    }
+}
+
+.agentHelp {
+    width: 100%;
+    height: auto;
+    padding-top: 5px;
+    display: none;
+
+    &.display {
+        display: block;
+    }
+
+    &.rule {
+
+        .center {
+
+            .leftSide {
+
+                .btnBox {
+
+                    li {
+                        width: 255px;
+                        font-size: 17px;
+                        padding-left: 12px;
+
+                        &:hover,&:active,&.active {
+                            width: 270px;
+                        }
+                    }
+                }
+            }
+
+            .rightSide {
+
+                .box {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    .topBanner {
+        width: 100%;
+        height: auto;
+        padding-top: 29%;
+    }
+
+    .bigTitle {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0 50px;
+
+        p {
+            color: $agent_Color_1;
+            font-size: 45px;
+            font-weight: bold;
+        }
+
+        i {
+            width: 18px;
+            height: 18px;
+            margin: 0 10px;
+        }
+    }
+
+    .lineTitle {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .smallStar_ic {
+            width: 19px;
+            height: 19px;
+            flex-shrink: 0;
+        }
+
+        p {
+            color: $mainFont_1;
+            font-size: 25px;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin: 0 15px;
+        }
+
+        .line {
+            width: 100%;
+            height: 2px;
+            background: $line;
+        }
+
+        .star_ic {
+            width: 112px;
+            height: 12px;
+            flex-shrink: 0;
+            margin-left: 15px;
+        }
+    }
+
+    .privacyCenter {
+        width: 1400px;
+        height: auto;
+        margin: 0 auto;
+
+        .textBox {
+            width: 100%;
+            height: auto;
+            margin-bottom: 40px;
+
+            &:last-child {
+                margin-bottom: 120px;
+            }
+
+            p {
+                color: $mainFont_3;
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .center {
+        width: 1400px;
+        height: auto;
+        @include innerPageWrapBG;
+        display: flex;
+        padding: 72px 24px 24px;
+        margin: 0 auto 80px;
+     
+        //leftSide
+        .leftSide {
+            width: 280px;
+            height: auto;
+            padding-bottom: 85px;
+            display: flex;
+            flex-shrink: 0;
+
+            .line_long {
+                width: 5px;
+                height: auto;
+                background: $line;
+                border-radius: 10px;
+                position: relative;
+
+                div {
+                    width: auto;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-53%);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    &:first-child {
+                        height: 35px;
+                        top: -45px;
+                    }
+
+                    &:last-child {
+                        height: 75px;
+                        bottom: -85px;
+                    }
+
+                    .line_short {
+                        width: 5px;
+                        height: 9px;
+                        background: $line;
+                        border-radius: 10px;
+                    }
+
+                    .star_ic {
+                        width: 19px;
+                        height: 19px;
+                    }
+                }
+            }
+
+            .btnBox {
+                width: auto;
+                height: auto;
+
+                li {
+                    width: 205px;
+                    height: 45px;
+                    @include agentHelpList;
+                    margin-bottom: 12px;
+
+                    &:hover,&:active,&.active {
+                        width: 235px;
+                    }
+                }
+            }
+        }
+
+        //rightSide
+        .rightSide {
+            width: 100%;
+            height: auto;
+            max-height: 800px;
+            overflow-y: auto;
+            margin-top: -45px;
+            padding: 10px;
+            @include scollBar;
+
+            .lineTitle {
+                margin: 30px 0;
+                
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                p {
+                    margin: 0 15px 0 0;
+                }
+            }
+
+            .box {
+                width: 100%;
+                height: auto;
+                @include innerBG_2;
+                border: none;
+                padding: 24px;
+
+                .smallTitle {
+                    color: $mainFont_2;
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin: 30px 0 20px;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+
+                p:not(.smallTitle) {
+                    color: $mainFont_3;
+                    font-size: 16px;
+                    font-weight: bold;
+                    line-height: 24px;
+                    margin-bottom: 10px;
+
+                    &.sp {
+                        padding-left: 10px;
+                    }
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    span {
+                        color: $mainFont_1;
+                    }
+                }
+            }
+        }
+    }
+}

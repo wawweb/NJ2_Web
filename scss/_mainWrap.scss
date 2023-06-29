@@ -1,0 +1,202 @@
+ .mainWrap {
+    width: 100%;
+    height: auto;
+    margin-bottom: 80px;
+
+    .center {
+        width: 1400px;
+        height: auto;
+        margin: 0 auto;
+
+        //marqueeWrap
+        .marqueeWrap {
+            width: 100%;
+            height: auto;
+            margin: 30px 0;
+
+            .marquee {
+                width: 100%;
+                height: 52px;
+                background: $marquee_BG;
+                border: solid 1px $marquee_Border;
+                border-radius: 30px;
+                box-shadow: 0 2px 5px 0 $marquee_Shadow inset;
+                display: flex;
+
+                .title {
+                    width: 165px;
+                    height: 100%;
+                    background: $marquee_Linear;
+                    border-radius: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+
+                    p {
+                        color: $marquee_Linear_Word;
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                }
+
+                .textBox {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    overflow: hidden;
+                    
+                    p {
+                        color: $marquee_Word;
+                        font-size: 20px;
+                        font-weight: bold;
+                        white-space: nowrap;
+                        padding-left: 100%;
+                        animation: marquee 10s linear 0s infinite;
+                    }
+                }
+
+                @keyframes marquee {
+                    0% {
+                        transform: translateX(0%);
+                    }
+
+                    100% {
+                        transform: translateX(-100%);
+                    }
+                }
+            }
+        }
+
+        //遊戲平台選單
+        .typeList {
+            width: 100%;
+            height: auto;
+
+            .typeBox {
+                width: 100%;
+                height: auto;
+                position: relative;
+
+                &.hotGame {
+
+                    .pageBtn {
+
+                        &.prev,
+                        &.next {
+                            top: 145px;
+                        }
+                    }
+                }
+
+                .pageBtn {
+                    width: 52px;
+                    height: 52px;
+                    @include pageBtn;
+
+                    &.prev {
+                        left: -26px;
+                        top: 160px;
+                        transform: scaleX(-1);
+                    }
+                    &.next {
+                        right: -26px;
+                        top: 160px;
+                    }
+                }
+
+                .title {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+    
+                    i {
+                        width: 62px;
+                        height: 68px;
+                        flex-shrink: 0;
+                        margin-right: 10px;
+
+                        &.hot_ic {
+                            background-position-x: 0;
+                        }
+                        &.sport_ic {
+                            background-position-x: 20%;
+                        }
+                        &.live_ic {
+                            background-position-x: 40%;
+                        }
+                        &.slot_ic {
+                            background-position-x: 60%;
+                        }
+                        &.fish_ic {
+                            background-position-x: 80%;
+                        }
+                        &.board_ic {
+                            background-position-x: 100%;
+                        }
+                    }
+    
+                    p {
+                        width: 185px;
+                        color: $subDeco_color02;
+                        font-size: 24px;
+                        font-weight: bold;
+                        flex-shrink: 0;
+                    }
+    
+                    .line {
+                        width: 100%;
+                        height: 3px;
+                        background: $subDeco_color02;
+                    }
+    
+                    .star {
+                        width: 112px;
+                        height: 12px;
+                        margin-left: 15px;
+                        flex-shrink: 0;
+                    }
+                }
+    
+                ul {
+                    width: 100%;
+                    height: auto;
+                    overflow: hidden;
+                    
+                    ol {
+                        width: auto;
+                        height: auto;
+                        display: flex;
+                        transition: 0.5s all;
+
+                        li {
+                            width: 344px;
+                            height: auto;
+                            flex-shrink: 0;
+                            margin-right: 8px;
+                            cursor: pointer;
+                            user-select: none;
+
+                            &.game {
+                                width: 274px;
+                                margin-right: 7.5px;
+                            }
+
+                            p {
+                                width: 100%;
+                                color: $subDeco_color02;
+                                font-size: 18px;
+                                font-weight: bold;
+                                text-align: center;
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.25">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./js/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./js/slick-1.8.1/slick/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="./js/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="./js/javascript.js"></script>
+    <link rel="shortcut icon" href="./images/NJLOGO_64x64.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <!--上部-->
+        <div class="top">
+            <!--logo-->
+            <img class="logo" src="./images/icon/xmas_logo.png" onclick="window.location.href='./index.html'">
+            <!--右_未登入-->
+            <ul class="user">
+                <!--未登入選單-->
+                <li>
+                    <form class="loginForm">
+                        <div>
+                            <input type="text" placeholder="アカウント">
+                        </div>
+                        <div>
+                            <input type="password" placeholder="パスワード">
+                        </div>
+                        <button class="loginBtn" type="button" onclick="window.location.href='./html/innerIndex.html'">サインイン</button>
+                        <button class="signupBtn" type="button" onclick="window.location.href='./html/register.html'">登録済み</button>
+                    </form>
+                </li>
+                <!--忘記密碼-->
+                <li class="forget">
+                    <i></i>
+                    パスワード紛失
+                </li>
+                <!--語言列-->
+                <li class="lang">
+                    <select>
+                        <option>繁體中文</option>
+                        <option>简体中文</option>
+                        <option>ENGLISH</option>
+                        <option selected>日本語</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <!--選單-->
+        <div class="gameNav">
+            <ul>
+                <li class="empty"></li>
+                <ol>
+                    <li class="homeBtn active" onclick="window.location.href='./index.html'">
+                        <div></div>
+                        <p>ホームページ</p>
+                    </li>
+                    <li class="sportBtn unLogin">
+                        <div></div>
+                        <p>スポーツ</p>
+                    </li>
+                    <li class="liveBtn unLogin">
+                        <div></div>
+                        <p>ライブ</p>
+                    </li>
+                    <li class="slotBtn unLogin">
+                        <div></div>
+                        <p>スロット</p>
+                    </li>
+                    <li class="fishBtn unLogin">
+                        <div></div>
+                        <p>釣りゲーム</p>
+                    </li>
+                    <li class="boardBtn unLogin">
+                        <div></div>
+                        <p>カードゲーム</p>
+                    </li>
+                    <li class="eventBtn unLogin">
+                        <div></div>
+                        <p>プロモーション</p>
+                    </li>
+                    <li class="vipBtn unLogin">
+                        <div></div>
+                        <p>VIPクラブ</p>
+                    </li>
+                </ol>
+                <li class="empty"></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <!--輪播圖-->
+        <div class="ad">
+            <ul class="single-item">
+                <li><img src="./images/banner.jpg"></li>
+                <li><img src="./images/banner.jpg"></li>
+                <li><img src="./images/banner.jpg"></li>
+            </ul>
+        </div>
+        <!--主區塊-->
+        <div class="mainWrap">
+            <div class="center">
+                <!--跑馬燈-->
+                <div class="marqueeWrap">
+                    <div class="marquee">
+                        <div class="title">
+                            <p>最新ニュース</p>
+                        </div>
+                        <div class="textBox">
+                            <p>プロモーション~ライブカジノリベートボーナス</p>
+                        </div>
+                    </div>
+                </div>
+                <!--遊戲平台選單-->
+                <div class="typeList">
+                    <!--熱門遊戲-->
+                    <div class="typeBox hotGame">
+                        <div class="title">
+                            <i class="hot_ic"></i>
+                            <p>トップゲーム</p>
+                            <div class="line"></div>
+                            <div class="star"></div>
+                        </div>
+                        <i class="pageBtn prev"></i>
+                        <ul>
+                            <ol>
+                                <li class="game unLogin">
+                                    <img src="./images/partner/hot/hotGame_1.png" alt="">
+                                    <p>永遠のキス</p>
+                                </li>
+                                <li class="game unLogin">
+                                    <img src="./images/partner/hot/hotGame_2.png" alt="">
+                                    <p>赤ずきん</p>
+                                </li>
+                                <li class="game unLogin">
+                                    <img src="./images/partner/hot/hotGame_3.png" alt="">
+                                    <p>魔法の豆</p>
+                                </li>
+                                <li class="game unLogin">
+                                    <img src="./images/partner/hot/hotGame_4.png" alt="">
+                                    <p>料理一番</p>
+                                </li>
+                                <li class="game unLogin">
+                                    <img src="./images/partner/hot/hotGame_5.png" alt="">
+                                    <p>無限西遊</p>
+                                </li>
+                                <li class="game unLogin">
+                                    <img src="./images/partner/hot/hotGame_4.png" alt="">
+                                    <p>料理一番</p>
+                                </li>
+                                <li class="game unLogin">
+                                    <img src="./images/partner/hot/hotGame_5.png" alt="">
+                                    <p>無限西遊</p>
+                                </li>
+                                <li class="game unLogin">
+                                    <img src="./images/partner/hot/hotGame_2.png" alt="">
+                                    <p>赤ずきん</p>
+                                </li>
+                                <li class="game unLogin">
+                                    <img src="./images/partner/hot/hotGame_1.png" alt="">
+                                    <p>永遠のキス</p>
+                                </li>
+                                <li class="game unLogin">
+                                    <img src="./images/partner/hot/hotGame_3.png" alt="">
+                                    <p>魔法の豆</p>
+                                </li>
+                            </ol>
+                        </ul>
+                        <i class="pageBtn next"></i>
+                    </div>
+                    <!--體育賽事-->
+                    <div class="typeBox sportGame">
+                        <div class="title">
+                            <i class="sport_ic"></i>
+                            <p>スポーツ</p>
+                            <div class="line"></div>
+                            <div class="star"></div>
+                        </div>
+                        <i class="pageBtn prev"></i>
+                        <ul>
+                            <ol>
+                                <li class="unLogin">
+                                    <img src="./images/partner/sport/sportPlatform_36588.png" alt="">
+                                    <p>36588スポーツ</p>
+                                </li>
+                            </ol>
+                        </ul>
+                        <i class="pageBtn next"></i>
+                    </div>
+                    <!--真人-->
+                    <div class="typeBox liveGame">
+                        <div class="title">
+                            <i class="live_ic"></i>
+                            <p>ライブ</p>
+                            <div class="line"></div>
+                            <div class="star"></div>
+                        </div>
+                        <i class="pageBtn prev"></i>
+                        <ul>
+                            <ol>
+                                <li class="unLogin">
+                                    <img src="./images/partner/live/livePlatform_ab.png" alt="">
+                                    <p>ABライブ</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/live/livePlatform_ag.png" alt="">
+                                    <p>AGライブ</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/live/livePlatform_dg.png" alt="">
+                                    <p>DGライブ</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/live/livePlatform_evo.png" alt="">
+                                    <p>EVOライブ</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/live/livePlatform_mg.png" alt="">
+                                    <p>MGライブ</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/live/livePlatform_og.png" alt="">
+                                    <p>OGライブ</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/live/livePlatform_pp.png" alt="">
+                                    <p>PRAGMATICPLAYライブ</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/live/livePlatform_sa.png" alt="">
+                                    <p>SAライブ</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/live/livePlatform_wm.png" alt="">
+                                    <p>WMライブ</p>
+                                </li>
+                            </ol>
+                        </ul>
+                        <i class="pageBtn next"></i>
+                    </div>
+                    <!--老虎機-->
+                    <div class="typeBox slotGame">
+                        <div class="title">
+                            <i class="slot_ic"></i>
+                            <p>スロット</p>
+                            <div class="line"></div>
+                            <div class="star"></div>
+                        </div>
+                        <i class="pageBtn prev"></i>
+                        <ul>
+                            <ol>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_ag.png" alt="">
+                                    <p>AGスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_atux.png" alt="">
+                                    <p>ATUXスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_bng.png" alt="">
+                                    <p>BNGスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_bp.png" alt="">
+                                    <p>BPスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_elk.png" alt="">
+                                    <p>ELKスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_ely.png" alt="">
+                                    <p>ELYスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_evo.png" alt="">
+                                    <p>EVOスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_ftp.png" alt="">
+                                    <p>4thePlayerスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_gh.png" alt="">
+                                    <p>GOLDENHEROスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_hn.png" alt="">
+                                    <p>HABANEROスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_ifun.png" alt="">
+                                    <p>iFunスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_jili.png" alt="">
+                                    <p>JILIスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_mg.png" alt="">
+                                    <p>MGスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_net.png" alt="">
+                                    <p>NETスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_nolimit.png" alt="">
+                                    <p>noLimitスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_pg.png" alt="">
+                                    <p>PGスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_pls.png" alt="">
+                                    <p>PLSスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_png.png" alt="">
+                                    <p>PNGスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_pp.png" alt="">
+                                    <p>PRAGMATICPLAYスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_quickspin.png" alt="">
+                                    <p>QUICKSPINスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_relax.png" alt="">
+                                    <p>RELAXスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_rr.png" alt="">
+                                    <p>RED RAKEスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_rsg.png" alt="">
+                                    <p>RSGスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_rt.png" alt="">
+                                    <p>RED TIGERスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_sp.png" alt="">
+                                    <p>SPスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_tpg.png" alt="">
+                                    <p>TPGスロット</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/slot/slotPlatform_ygg.png" alt="">
+                                    <p>YGGDRASILスロット</p>
+                                </li>
+                            </ol>
+                        </ul>
+                        <i class="pageBtn next"></i>
+                    </div>
+                    <!--捕魚機-->
+                    <div class="typeBox fishGame">
+                        <div class="title">
+                            <i class="fish_ic"></i>
+                            <p>釣りゲーム</p>
+                            <div class="line"></div>
+                            <div class="star"></div>
+                        </div>
+                        <i class="pageBtn prev"></i>
+                        <ul>
+                            <ol>
+                                <li class="unLogin">
+                                    <img src="./images/partner/fish/fishPlatform_sp.png" alt="">
+                                    <p>SIMPLE釣りゲーム</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/fish/fishPlatform_jili.png" alt="">
+                                    <p>JILI釣りゲーム</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/fish/fishPlatform_rsg.png" alt="">
+                                    <p>RSG釣りゲーム</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/fish/fishPlatform_tpg.png" alt="">
+                                    <p>TPG釣りゲーム</p>
+                                </li>
+                            </ol>
+                        </ul>
+                        <i class="pageBtn next"></i>
+                    </div>
+                    <!--棋牌遊戲-->
+                    <div class="typeBox boardGame">
+                        <div class="title">
+                            <i class="board_ic"></i>
+                            <p>カードゲーム</p>
+                            <div class="line"></div>
+                            <div class="star"></div>
+                        </div>
+                        <i class="pageBtn prev"></i>
+                        <ul>
+                            <ol>
+                                <li class="unLogin">
+                                    <img src="./images/partner/board/boardPlatform_ag.png" alt="">
+                                    <p>AGカードゲーム</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/board/boardPlatform_ely.png" alt="">
+                                    <p>ELYカードゲーム</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/board/boardPlatform_ftp.png" alt="">
+                                    <p>4thePlayerカードゲーム</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/board/boardPlatform_hn.png" alt="">
+                                    <p>HABANEROカードゲーム</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/board/boardPlatform_ifun.png" alt="">
+                                    <p>iFunカードゲーム</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/board/boardPlatform_jili.png" alt="">
+                                    <p>JILIカードゲーム</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/board/boardPlatform_mg.png" alt="">
+                                    <p>MGカードゲーム</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/board/boardPlatform_pg.png" alt="">
+                                    <p>PGカードゲーム</p>
+                                </li>
+                                <li class="unLogin">
+                                    <img src="./images/partner/board/boardPlatform_rr.png" alt="">
+                                    <p>RED RAKEカードゲーム</p>
+                                </li>
+                            </ol>
+                        </ul>
+                        <i class="pageBtn next"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <nav class="sideBar">
+        <!-- 邀請朋友 -->
+        <button class="inviteFriend" type="button"></button>
+        <!--goTop-->
+        <button class="goTop">
+            <i></i>
+            <p>TOP</p>
+        </button>
+    </nav>
+    <footer>
+        <div class="center">
+            <!--top-->
+            <div class="top">
+                <ul class="listBox">
+                    <li class="list">
+                        <p class="title">最新のお知らせ</p>
+                        <ul>
+                            <li class="unLogin">
+                                <i></i>
+                                <p>人気</p>
+                            </li>
+                            <li class="unLogin">
+                                <i></i>
+                                <p>ノーマル</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list">
+                        <p class="title">よくある質問</p>
+                        <ul>
+                            <li class="unLogin">
+                                <i></i>
+                                <p>プロモーション</p>
+                            </li>
+                            <li class="unLogin">
+                                <i></i>
+                                <p>入出金と振替</p>
+                            </li>
+                            <li class="unLogin">
+                                <i></i>
+                                <p>入出金方法</p>
+                            </li>
+                            <li class="unLogin">
+                                <i></i>
+                                <p class="small">登録とアカウント</p>
+                            </li>
+                            <li class="unLogin">
+                                <i></i>
+                                <p>アフィリエイト</p>
+                            </li>
+                            <li class="unLogin">
+                                <i></i>
+                                <p>お問い合わせ</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list">
+                        <p class="title">当社について</p>
+                        <ul>
+                            <li class="unLogin">
+                                <i></i>
+                                <p>当社について</p>
+                            </li>
+                            <li class="unLogin">
+                                <i></i>
+                                <p class="small">プライバシーポリシー</p>
+                            </li>
+                            <li class="unLogin">
+                                <i></i>
+                                <p>利用規約</p>
+                            </li>
+                            <li class="unLogin">
+                                <i></i>
+                                <p class="small">責任あるゲーミング</p>
+                            </li>
+                            <li class="unLogin">
+                                <i></i>
+                                <p>プロモーション</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list">
+                        <p class="title">VIPメンバー</p>
+                        <ul>
+                            <li class="unLogin">
+                                <i></i>
+                                <p>VIPレベル</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="linkBox">
+                    <button class="unLogin">チャット</button>
+                    <button class="link"></button>
+                    <a class="twitter" href="https://twitter.com"></a>
+                </div>
+            </div>
+            <!--separate-->
+            <div class="separateBox">
+                <p>GAME PROVIDERS</p>
+                <div class="line"></div>
+                <div class="star"></div>
+            </div>
+            <!--bottom-->
+            <div class="bottom">
+                <ul>
+                    <li>
+                        <div class="net"></div>
+                        <div class="sa"></div>
+                        <div class="dg"></div>
+                        <div class="gh"></div>
+                        <div class="og"></div>
+                        <div class="sp"></div>
+                        <div class="jili"></div>
+                        <div class="elk"></div>
+                        <div class="bp"></div>
+                        <div class="evo"></div>
+                        <div class="ftp"></div>
+                    </li>
+                    <li>
+                        <div class="bng"></div>
+                        <div class="ab"></div>
+                        <div class="pls"></div>
+                        <div class="rsg"></div>
+                        <div class="ag"></div>
+                        <div class="tpg"></div>
+                    </li>
+                    <li>
+                        <div class="ely"></div>
+                        <div class="qs"></div>
+                        <div class="atux"></div>
+                        <div class="evoplay"></div>
+                        <div class="sport"></div>
+                        <div class="pg"></div>
+                        <div class="png"></div>
+                        <div class="mg"></div>
+                        <div class="pp"></div>
+                        <div class="redrake"></div>
+                    </li>
+                    <li>
+                        <div class="nolimit"></div>
+                        <div class="ifun"></div>
+                        <div class="wm"></div>
+                        <div class="ygg"></div>
+                        <div class="relax"></div>
+                        <div class="redtiger"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="base"></div>
+    </footer>
+    <div class="filter">
+        <!--忘記密碼-->
+        <div class="jumpWindow forgetPassword">
+            <div class="title">
+                <p>パスワードをお忘れの方</p>
+                <i class="close_ic"></i>
+            </div>
+            <form>
+                <input type="text" placeholder="携帯番号を入力してください">
+                <button>確認</button>
+                <p>携帯電話に新しいパスワードをお送りしますので、ショートメールをご確認ください</p>
+            </form>
+        </div>
+        <!--單純轉跳彈窗-->
+        <div class="jumpWindow plsGo">
+            <div class="title">
+                <p>ヒント</p>
+                <i class="close_ic"></i>
+            </div>
+            <div class="content">
+                <p>先にログインください</p>
+            </div>
+            <button class="close">確認</button>
+        </div>
+    </div>
+    <div class="bg"></div>
+</body>
+</html>

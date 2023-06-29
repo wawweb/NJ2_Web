@@ -1,0 +1,40 @@
+html {
+    width: 100%;
+    height: auto;
+    background: $mainColor;
+    
+    &.forRegister {
+        background: $register_htmlBG;
+    }
+
+    body {
+        width: 100%;
+        height: auto;
+        min-width: 1400px;
+        min-height: 768px;
+        position: relative;
+        @include scollBar;
+
+        @import "./header";
+        @import "./ad";
+        @import "./sideBar";
+        @import "./mainWrap";
+        @import "./footer";
+        @import "./jumpWindow";
+        @import "./gameWrap";
+        @import "./event";
+        @import "./innerPage";
+        @import "./help";
+        @import "./register";
+        @import "./agent";
+
+        .bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -999;
+        }
+    }
+}
